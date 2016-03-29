@@ -9,6 +9,7 @@ if points are:
 (xb, yb, zb)
 then dist = sqrt((xa-xb)^2 + (za-zb)^2)
 */
+// Euclidean works with slices of ints
 func euclidean(v1, v2 []int) float64 {
 	sumSq := 0.0
 	for i := 0; i < len(v1); i++ {
