@@ -123,6 +123,7 @@ func main() {
                          "You, Me and Dupree":1.0,
                          "Superman Returns":4.0}
                 }`)
+
 	var critics map[string]interface{}
 	err := json.Unmarshal(payload, &critics)
 	if err != nil {
@@ -133,7 +134,6 @@ func main() {
 	fmt.Println(critics["Toby"])
 	fmt.Println(critics["Toby"].(map[string]interface{})["Snakes on a Plane"])
 
+	// See page 11 for how this is done in Python
 	fmt.Printf("\n\nsimDistance between Lisa Rose and Gene Seymour: \n%v\n", simDistance(critics, "Lisa Rose", "Gene Seymour"))
-	// Is there a way to set it up to lookup with critics["Toby"]["Snakes on a Plane"] ?
-	// I cannot figure out how to make the type/struct to fit properly to accomplish taht
 }
